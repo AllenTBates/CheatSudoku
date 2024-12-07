@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:t="clr-namespace:CheatSudoku.Templates"
+             x:Class="CheatSudoku.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry" x:Key="SudokuEntry">
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="MaximumWidthRequest" Value="35"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+        <VerticalStackLayout Padding="15"
+            Spacing="10">
+            <!--Don't break into squares. Need to have -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Grid RowDefinitions="1,*,1,*,1,*,2,*,1,*,1,*,2,*,1,*,1,*,1"
+                     ColumnDefinitions="1,*,1,*,1,*,2,*,1,*,1,*,2,*,1,*,1,*,1">
+                    <!--Block 1-->
+                    <t:SudokuEntry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="1" TextChanged="GridUpdated" Row="0" Col="0"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="3"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="5" />
+                    <Entry Style="{StaticResource SudokuEntry}"  Grid.Row="3" Grid.Column="1"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="5" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="1"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="5" />
+                    <!--Block 2-->
+                    <Entry VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="11" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="11" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="11" />
+                    <!--Block 3-->
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="1" Grid.Column="17" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="3" Grid.Column="17" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="5" Grid.Column="17" />
+                    <!--Block 4-->
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="1"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="5" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="1"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="5" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="1"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="5" />
+                    <!--Block 5-->
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="11" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="11" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="11" />
+                    <!--Block 6-->
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="7" Grid.Column="17" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="9" Grid.Column="17" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="11" Grid.Column="17" />
+                    <!--Block 7-->
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="1" MaximumWidthRequest="50"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="5" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="1" MaximumWidthRequest="50"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="5" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="1" MaximumWidthRequest="50"/><Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="3" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="5" />
+                    <!--Block 8-->
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="11" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="11" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="7" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="9" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="11" />
+                    <!--Block 9-->
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="13" Grid.Column="17" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="15" Grid.Column="17" />
+                    <Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="13" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="15" /><Entry Style="{StaticResource SudokuEntry}" Grid.Row="17" Grid.Column="17" />
+                    
+                    <!--Column Lines-->
+                    <BoxView Color="Black" Grid.Row="0" Grid.ColumnSpan="18"/><BoxView Color="Black" Grid.Row="2" Grid.ColumnSpan="18"/>
+                    <BoxView Color="Black" Grid.Row="4" Grid.ColumnSpan="18"/><BoxView Color="Black" Grid.Row="6" Grid.ColumnSpan="18"/>
+                    <BoxView Color="Black" Grid.Row="8" Grid.ColumnSpan="18"/><BoxView Color="Black" Grid.Row="10" Grid.ColumnSpan="18"/>
+                    <BoxView Color="Black" Grid.Row="12" Grid.ColumnSpan="18"/><BoxView Color="Black" Grid.Row="14" Grid.ColumnSpan="18"/>
+                    <BoxView Color="Black" Grid.Row="16" Grid.ColumnSpan="18"/><BoxView Color="Black" Grid.Row="18" Grid.ColumnSpan="18"/>
+
+                    <!---Row Lines-->
+                    <BoxView Color="Black" Grid.RowSpan="18" Grid.Column="0"/><BoxView Color="Black" Grid.RowSpan="18" Grid.Column="2"/>
+                    <BoxView Color="Black" Grid.RowSpan="18" Grid.Column="4"/><BoxView Color="Black" Grid.RowSpan="18" Grid.Column="6"/>
+                    <BoxView Color="Black" Grid.RowSpan="18" Grid.Column="8"/><BoxView Color="Black" Grid.RowSpan="18" Grid.Column="10"/>
+                    <BoxView Color="Black" Grid.RowSpan="18" Grid.Column="12"/><BoxView Color="Black" Grid.RowSpan="18" Grid.Column="14"/>
+                    <BoxView Color="Black" Grid.RowSpan="18" Grid.Column="16"/><BoxView Color="Black" Grid.RowSpan="18" Grid.Column="18"/>
+                </Grid>
+            </HorizontalStackLayout>
+            <!--Bottom Toolbar-->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                <Button Text="Take Photo"/>
+                <Button Text="Solve"/>
+                <Button Text="Clear"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+</ContentPage>
