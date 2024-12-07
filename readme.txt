@@ -1,0 +1,1 @@
+Experimental app for testing OCR and Sudoku Solving Algorithm Performance
